@@ -5,10 +5,10 @@ const Subscribe: QuartzComponent = () => {
     <div class="subscribe-form">
       <p class="subscribe-title">Подписаться на рассылку</p>
       <form
-        action="https://buttondown.com/api/emails/embed-subscribe/ТВОЙ_USERNAME"
+        action="https://buttondown.com/api/emails/embed-subscribe/olegbatalov"
         method="post"
         target="popupwindow"
-        onsubmit="window.open('https://buttondown.com/ТВОЙ_USERNAME', 'popupwindow')"
+        onsubmit="window.open('https://buttondown.com/olegbatalov', 'popupwindow')"
         class="embeddable-buttondown-form"
       >
         <input
