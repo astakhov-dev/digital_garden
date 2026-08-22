@@ -1,43 +1,32 @@
 @use "./base.scss";
 .explorer-item { margin-bottom: 0.5rem; } .explorer a { line-height: 1.4; display: inline-block; padding: 2px 0; }
-/* Плавное скрытие боковых колонок при скролле */
+/* Нативное скрытие сайдбаров при скролле */
 @media all and (min-width: 1200px) {
   .left.sidebar,
   .right.sidebar {
-    position: sticky;
-    top: 2rem;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease;
   }
 
-  /* Скрываем боковые колонки при скролле чтения */
-  body:has(:focus-within) .left.sidebar,
-  body:has(:focus-within) .right.sidebar {
-    opacity: 1;
-  }
-
-  /* Режим фокуса на тексте при прокрутке */
-  @supports (animation-timeline: scroll()) {
+  /* По умолчанию при скролле скрываем колонки */
+  @supports (top: sticky) {
     .left.sidebar,
     .right.sidebar {
-      animation: fadeOutSidebars linear forwards;
-      animation-timeline: scroll(root);
-      animation-range: 0px 200px;
+      opacity: var(--sidebar-opacity, 1);
     }
+  }
 
-    .left.sidebar:hover,
-    .right.sidebar:hover {
-      opacity: 1 !important;
-    }
+  /* При наведении курсора на край экрана колонки проявляются back */
+  .left.sidebar:hover,
+  .right.sidebar:hover {
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 }
 
-@keyframes fadeOutSidebars {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    pointer-events: none;
-  }
+/* Скрытие колонок при скролле страницы вниз */
+html[data-nav='false'] .left.sidebar,
+html[data-nav='false'] .right.sidebar {
+  opacity: 0;
+  pointer-events: none;
 }
 // put your custom CSS here!
