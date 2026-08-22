@@ -1,3 +1,27 @@
 @use "./base.scss";
 .explorer-item { margin-bottom: 0.5rem; } .explorer a { line-height: 1.4; display: inline-block; padding: 2px 0; }
+/* Плавное исчезновение боковых колонок при скролле */
+@media all and (min-width: 1200px) {
+  .left.sidebar,
+  .right.sidebar {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Скрываем колонки, когда страница прокручена вниз */
+  html:not([data-scroll="0"]) {
+    .left.sidebar,
+    .right.sidebar {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    /* Проявление при наведении мыши на край экрана */
+    .left.sidebar:hover,
+    .right.sidebar:hover {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
 // put your custom CSS here!
