@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Медленный прогресс — это нормально.md",
+                "file": "content/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Медленный прогресс — это нормально"
+              "title": "index"
             }
           }
         ]
@@ -169,16 +169,27 @@
               "icon": "lucide-list",
               "title": "Структура"
             }
+          },
+          {
+            "id": "48f59fe9e472df32",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Меню быстрого перехода": false,
       "graph:Граф": false,
       "canvas:Создать новый холст": false,
@@ -189,5 +200,9 @@
     }
   },
   "active": "1debd1061581ef59",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "content/Deep Work или углубленная работа.md",
+    "content/Почему стоит преодолеть страх показывать свое творчество в сети и выражать мнение публично.md",
+    "content/Медленный прогресс — это нормально.md"
+  ]
 }
