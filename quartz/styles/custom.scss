@@ -1,32 +1,26 @@
 @use "./base.scss";
 .explorer-item { margin-bottom: 0.5rem; } .explorer a { line-height: 1.4; display: inline-block; padding: 2px 0; }
-/* Нативное скрытие сайдбаров при скролле */
+/* Универсальный режим чтения для Safari, Chrome и Edge */
 @media all and (min-width: 1200px) {
   .left.sidebar,
   .right.sidebar {
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease, filter 0.4s ease;
   }
 
-  /* По умолчанию при скролле скрываем колонки */
-  @supports (top: sticky) {
-    .left.sidebar,
-    .right.sidebar {
-      opacity: var(--sidebar-opacity, 1);
-    }
+  /* Когда читатель фокусируется на тексте (наводит курсор на центральную колонку) */
+  .page:has(.center:hover) .left.sidebar,
+  .page:has(.center:hover) .right.sidebar {
+    opacity: 0.05;
+    filter: blur(2px);
+    pointer-events: none;
   }
 
-  /* При наведении курсора на край экрана колонки проявляются back */
+  /* При подведении курсора к боковинам они мгновенно проявляются */
   .left.sidebar:hover,
   .right.sidebar:hover {
     opacity: 1 !important;
+    filter: blur(0) !important;
     pointer-events: auto !important;
   }
-}
-
-/* Скрытие колонок при скролле страницы вниз */
-html[data-nav='false'] .left.sidebar,
-html[data-nav='false'] .right.sidebar {
-  opacity: 0;
-  pointer-events: none;
 }
 // put your custom CSS here!
