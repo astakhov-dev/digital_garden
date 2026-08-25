@@ -185,7 +185,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,8 +202,9 @@
   },
   "active": "1debd1061581ef59",
   "lastOpenFiles": [
-    "content/Deep Work или углубленная работа.md",
+    "content/Медленный прогресс — это нормально.md",
     "content/Почему стоит преодолеть страх показывать свое творчество в сети и выражать мнение публично.md",
-    "content/Медленный прогресс — это нормально.md"
+    "content/Deep Work или углубленная работа.md",
+    "content/index.md"
   ]
 }
