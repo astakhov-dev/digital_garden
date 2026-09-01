@@ -1,0 +1,7 @@
+views:
+  - type: table
+    name: Таблица
+  - type: cards
+    name: представление
+  - type: list
+    name: представление 2
