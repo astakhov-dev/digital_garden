@@ -1,5 +1,5 @@
 ---
-status: 🌱 Зерно
+status:
 slug:
 description:
 created: <% tp.date.now("YYYY-MM-DD") %>
