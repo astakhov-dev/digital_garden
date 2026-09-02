@@ -1,0 +1,399 @@
+filters:
+  and:
+    - file.folder == "content"
+views:
+  - type: table
+    name: Таблица
+    filters:
+      and:
+        - file.folder == "content"
+  - type: kanban-view
+    name: Канбан
+    columnOrders:
+      file.file:
+        - CNAME
+        - CODE_OF_CONDUCT.md
+        - Dockerfile
+        - LICENSE.txt
+        - README.md
+        - Templates/note.md.md
+        - content-board.base.base
+        - content/30 дней. Приоритет - не я.md
+        - content/30-ти дневный эксперимент.md
+        - content/Apple Watch и трекинг активности для простого учета калорий.md
+        - content/Deep Work или углубленная работа.md
+        - content/Highlights/Без названия 1.md
+        - content/Highlights/Как заработать на блоге.md
+        - content/Highlights/Как читать книгу в неделю С. Павлина.md
+        - content/Highlights/Маленькие экспериметы. Tiny Experiments. How to Live Freely in a Goal-Obsessed World.md
+        - content/Highlights/Мужество (смелость).md
+        - content/Highlights/Навык письма в блог.md
+        - content/Highlights/Освоить навык. И его калибровка.md
+        - content/Highlights/Полевые заметки из Tiny experiments.md
+        - content/Highlights/Растянутые цели.md
+        - content/IMG_0232.png
+        - content/IMG_1446.jpeg
+        - content/index.md
+        - content/Активно искать работу или довериться потоку.md
+        - content/Алгоритм поиска работы в Казахстане.md
+        - content/Апдейты.md
+        - content/Близкий человек (супруга или супруг) это один из лучших духовных наставников.md
+        - content/Будь готов к конфликту.md
+        - content/В любой непонятной ситуации — отпускай.md
+        - content/Возвращайся к скуке, она вернёт тебя к целям.md
+        - content/Восстанавливаем в браке браке после 40 с ребёнком.md
+        - content/Все про поддержание формы к 40 годам.md
+        - content/Все, что нужно знать, переходя в управление.md
+        - content/Всегда набрасывай план.md
+        - content/Выберите 10 главных навыков, которые приведут к 10.000$ ежемесячно.md
+        - content/Дети в семье учат смирению и призывают к духовному росту..md
+        - content/Для истинной реализации не пытайтесь определять себя через должность.md
+        - content/Доверие к жизни.md
+        - content/Достаточно ли тебе известно информации.md
+        - content/Достижение желаемой цели на примере работы с телом.md
+        - content/Достижение целей или воплощение желаемого.md
+        - content/Достижения ясности, как средство для мотивированного движения, через ведение дневника.md
+        - content/Едва уловимые чувства.md
+        - content/Если ищете себя, то ваша задача — помогать людям.md
+        - content/Если ты остаешься творцом, и осознаешь себя им, ты не можешь остановиться в развити.md
+        - content/Если ты остаешься творцом, и осознаешь себя им, ты не можешь остановиться в развитии.md
+        - content/Еще раз о вегетарианстве.md
+        - content/Женщина всегда права.md
+        - content/Жизнь. Живу. Заботимся о новорожденном. Дни одинаковые. Успеваю только….md
+        - content/Жить осознанно, это значит помнить о цели.md
+        - content/Застрять в самоопределении.md
+        - content/Изучи все свои состояния и научись их обходить.md
+        - content/Инерция.md
+        - content/Используй время по максимуму.md
+        - content/Как зарабатывать 10.000$ в месяц в найме. Карьера в организации.md
+        - content/Как и где начать вести блог.md
+        - content/Как найти работу.md
+        - content/Как обеспечить быстрое движение.md
+        - content/Как определиться с деятельностью. Стратегии выбора карьеры..md
+        - content/Как переключиться с рабочего вопроса, если он увлек, а другие направления также требуют внимания. И стоит ли.md
+        - content/Как сделать карьеру менеджера в корпорации.md
+        - content/Как хотеть и откуда берется мотивация.md
+        - content/Карьера в организации.md
+        - content/Карьерные решения.md
+        - content/Медленный прогресс — это нормально.md
+        - content/Молитва. 30-ти дневный эксперимент.md
+        - content/Навык планировать на высокой вибрации а выполнять в любом состоянии.md
+        - content/Не загоняйся, и вовремя отпусти.md
+        - content/Не начинай день, пока не вспомнишь что ты создаешь.md
+        - content/Не соглашайся в карьере.md
+        - content/О чем этот сайт.md
+        - content/Обработка идей и отделение от опыта.md
+        - content/Образ себя.md
+        - content/Одна цель основная во внимании размышлений а вторая на автопилоте.md
+        - content/Одно самое главное решение.md
+        - content/Одно, самое главное решение в жизни.md
+        - content/Паралич решения не может произойти, если есть срок, к которому его нужно принять.md
+        - content/Перезагрузка.md
+        - content/Поделюсь тут моими тренировками по боксу, возможно кто-то думает еще….md
+        - content/Почему стоит преодолеть страх показывать свое творчество в сети и выражать мнение публично.md
+        - content/Прежде чем говорить о целях, нужно закрыть базу.md
+        - content/Прежде чем искать ответы вовне, ответь сами.md
+        - content/Прекрати получать новую информацию.md
+        - content/Придумать себе должность.md
+        - content/Проблемы роста организации, как подружить команду и настроить ритм управления.md
+        - content/Работа — это вынужденный обоюдный социальный вклад.md
+        - content/Разобрал свой профиль Gallup и понял как развивать карьеру.md
+        - content/Родительство.md
+        - content/Самые главные цели.md
+        - content/Сколько целей одновременно можно вести.md
+        - content/Смелость.md
+        - content/Сознательная жизнь.md
+        - content/Сомнения.md
+        - content/Стартовые настройки большими делами.md
+        - content/Стратегии достижения финансового благополучия.md
+        - content/Текстовый блог в 2026 году.md
+        - content/Уметь выделять и совершать точечные действия.md
+        - content/Успешным публикациям нужна смелость.md
+        - content/Что нужно знать про нетворкинг. И что делать.md
+        - content/Что такое продуктивное мышление.md
+        - content/Чтобы узнать в своих сильных сторонах нужен определенный уровень самосознания.md
+        - content/Энергия. Где ты теряешь уже сегодня.md
+        - content/Я тут уже как месяц считайте что в декрете. Вся работа моя это на….md
+        - content/Ясность.md
+        - docs/advanced/architecture.md
+        - docs/advanced/creating components.md
+        - docs/advanced/index.md
+        - docs/advanced/making plugins.md
+        - docs/advanced/paths.md
+        - docs/authoring content.md
+        - docs/build.md
+        - docs/configuration.md
+        - docs/features/Citations.md
+        - docs/features/Docker Support.md
+        - docs/features/Latex.md
+        - docs/features/Mermaid diagrams.md
+        - docs/features/Obsidian compatibility.md
+        - docs/features/OxHugo compatibility.md
+        - docs/features/RSS Feed.md
+        - docs/features/Roam Research compatibility.md
+        - docs/features/SPA Routing.md
+        - docs/features/backlinks.md
+        - docs/features/breadcrumbs.md
+        - docs/features/callouts.md
+        - docs/features/comments.md
+        - docs/features/darkmode.md
+        - docs/features/explorer.md
+        - docs/features/folder and tag listings.md
+        - docs/features/full-text search.md
+        - docs/features/graph view.md
+        - docs/features/i18n.md
+        - docs/features/index.md
+        - docs/features/popover previews.md
+        - docs/features/private pages.md
+        - docs/features/reader mode.md
+        - docs/features/recent notes.md
+        - docs/features/social images.md
+        - docs/features/syntax highlighting.md
+        - docs/features/table of contents.md
+        - docs/features/upcoming features.md
+        - docs/features/wikilinks.md
+        - docs/hosting.md
+        - docs/images/custom-social-image-preview-dark.png
+        - docs/images/custom-social-image-preview-light.png
+        - docs/images/dns records.png
+        - docs/images/giscus-discussion.png
+        - docs/images/giscus-example.png
+        - docs/images/giscus-repo.png
+        - docs/images/giscus-results.png
+        - docs/images/github-init-repo-options.png
+        - docs/images/github-quick-setup.png
+        - docs/images/quartz transform pipeline.png
+        - docs/images/quartz-layout-desktop.png
+        - docs/images/quartz-layout-mobile.png
+        - docs/images/quartz-layout-tablet.png
+        - docs/images/social-image-preview-dark.png
+        - docs/images/social-image-preview-light.png
+        - docs/index.md
+        - docs/layout-components.md
+        - docs/layout.md
+        - docs/migrating from Quartz 3.md
+        - docs/philosophy.md
+        - docs/plugins/AliasRedirects.md
+        - docs/plugins/Assets.md
+        - docs/plugins/CNAME.md
+        - docs/plugins/Citations.md
+        - docs/plugins/ComponentResources.md
+        - docs/plugins/ContentIndex.md
+        - docs/plugins/ContentPage.md
+        - docs/plugins/CrawlLinks.md
+        - docs/plugins/CreatedModifiedDate.md
+        - docs/plugins/CustomOgImages.md
+        - docs/plugins/Description.md
+        - docs/plugins/ExplicitPublish.md
+        - docs/plugins/Favicon.md
+        - docs/plugins/FolderPage.md
+        - docs/plugins/Frontmatter.md
+        - docs/plugins/GitHubFlavoredMarkdown.md
+        - docs/plugins/HardLineBreaks.md
+        - docs/plugins/Latex.md
+        - docs/plugins/NotFoundPage.md
+        - docs/plugins/ObsidianFlavoredMarkdown.md
+        - docs/plugins/OxHugoFlavoredMarkdown.md
+        - docs/plugins/RemoveDrafts.md
+        - docs/plugins/RoamFlavoredMarkdown.md
+        - docs/plugins/Static.md
+        - docs/plugins/SyntaxHighlighting.md
+        - docs/plugins/TableOfContents.md
+        - docs/plugins/TagPage.md
+        - docs/plugins/index.md
+        - docs/setting up your GitHub repository.md
+        - docs/showcase.md
+        - docs/tags/component.md
+        - docs/tags/plugin.md
+        - docs/upgrading.md
+        - globals.d.ts
+        - index.d.ts
+        - package-lock.json
+        - package.json
+        - quartz.config.ts
+        - quartz.layout.ts
+        - quartz/bootstrap-cli.mjs
+        - quartz/bootstrap-worker.mjs
+        - quartz/build.ts
+        - quartz/cfg.ts
+        - quartz/cli/args.js
+        - quartz/cli/constants.js
+        - quartz/cli/handlers.js
+        - quartz/cli/helpers.js
+        - quartz/components/ArticleTitle.tsx
+        - quartz/components/Backlinks.tsx
+        - quartz/components/Body.tsx
+        - quartz/components/Breadcrumbs.tsx
+        - quartz/components/Comments.tsx
+        - quartz/components/ConditionalRender.tsx
+        - quartz/components/ContentMeta.tsx
+        - quartz/components/Darkmode.tsx
+        - quartz/components/Date.tsx
+        - quartz/components/DesktopOnly.tsx
+        - quartz/components/Explorer.tsx
+        - quartz/components/Flex.tsx
+        - quartz/components/Footer.tsx
+        - quartz/components/Graph.tsx
+        - quartz/components/Head.tsx
+        - quartz/components/Header.tsx
+        - quartz/components/MobileOnly.tsx
+        - quartz/components/OverflowList.tsx
+        - quartz/components/PageList.tsx
+        - quartz/components/PageTitle.tsx
+        - quartz/components/ReaderMode.tsx
+        - quartz/components/RecentNotes.tsx
+        - quartz/components/Search.tsx
+        - quartz/components/Spacer.tsx
+        - quartz/components/Subscribe.tsx
+        - quartz/components/TableOfContents.tsx
+        - quartz/components/TagList.tsx
+        - quartz/components/index.ts
+        - quartz/components/pages/404.tsx
+        - quartz/components/pages/Content.tsx
+        - quartz/components/pages/FolderContent.tsx
+        - quartz/components/pages/TagContent.tsx
+        - quartz/components/renderPage.tsx
+        - quartz/components/scripts/callout.inline.ts
+        - quartz/components/scripts/checkbox.inline.ts
+        - quartz/components/scripts/clipboard.inline.ts
+        - quartz/components/scripts/comments.inline.ts
+        - quartz/components/scripts/darkmode.inline.ts
+        - quartz/components/scripts/explorer.inline.ts
+        - quartz/components/scripts/graph.inline.ts
+        - quartz/components/scripts/mermaid.inline.ts
+        - quartz/components/scripts/popover.inline.ts
+        - quartz/components/scripts/readermode.inline.ts
+        - quartz/components/scripts/search.inline.ts
+        - quartz/components/scripts/search.test.ts
+        - quartz/components/scripts/spa.inline.ts
+        - quartz/components/scripts/toc.inline.ts
+        - quartz/components/scripts/util.ts
+        - quartz/components/styles/backlinks.scss
+        - quartz/components/styles/breadcrumbs.scss
+        - quartz/components/styles/clipboard.scss
+        - quartz/components/styles/contentMeta.scss
+        - quartz/components/styles/darkmode.scss
+        - quartz/components/styles/explorer.scss
+        - quartz/components/styles/footer.scss
+        - quartz/components/styles/graph.scss
+        - quartz/components/styles/legacyToc.scss
+        - quartz/components/styles/listPage.scss
+        - quartz/components/styles/mermaid.inline.scss
+        - quartz/components/styles/popover.scss
+        - quartz/components/styles/readermode.scss
+        - quartz/components/styles/recentNotes.scss
+        - quartz/components/styles/search.scss
+        - quartz/components/styles/toc.scss
+        - quartz/components/types.ts
+        - quartz/i18n/index.ts
+        - quartz/i18n/locales/ar-SA.ts
+        - quartz/i18n/locales/ca-ES.ts
+        - quartz/i18n/locales/cs-CZ.ts
+        - quartz/i18n/locales/de-DE.ts
+        - quartz/i18n/locales/definition.ts
+        - quartz/i18n/locales/en-GB.ts
+        - quartz/i18n/locales/en-US.ts
+        - quartz/i18n/locales/es-ES.ts
+        - quartz/i18n/locales/fa-IR.ts
+        - quartz/i18n/locales/fi-FI.ts
+        - quartz/i18n/locales/fr-FR.ts
+        - quartz/i18n/locales/he-IL.ts
+        - quartz/i18n/locales/hu-HU.ts
+        - quartz/i18n/locales/id-ID.ts
+        - quartz/i18n/locales/it-IT.ts
+        - quartz/i18n/locales/ja-JP.ts
+        - quartz/i18n/locales/kk-KZ.ts
+        - quartz/i18n/locales/ko-KR.ts
+        - quartz/i18n/locales/lt-LT.ts
+        - quartz/i18n/locales/nb-NO.ts
+        - quartz/i18n/locales/nl-NL.ts
+        - quartz/i18n/locales/pl-PL.ts
+        - quartz/i18n/locales/pt-BR.ts
+        - quartz/i18n/locales/ro-RO.ts
+        - quartz/i18n/locales/ru-RU.ts
+        - quartz/i18n/locales/th-TH.ts
+        - quartz/i18n/locales/tr-TR.ts
+        - quartz/i18n/locales/uk-UA.ts
+        - quartz/i18n/locales/vi-VN.ts
+        - quartz/i18n/locales/zh-CN.ts
+        - quartz/i18n/locales/zh-TW.ts
+        - quartz/plugins/emitters/404.tsx
+        - quartz/plugins/emitters/aliases.ts
+        - quartz/plugins/emitters/assets.ts
+        - quartz/plugins/emitters/cname.ts
+        - quartz/plugins/emitters/componentResources.ts
+        - quartz/plugins/emitters/contentIndex.tsx
+        - quartz/plugins/emitters/contentPage.tsx
+        - quartz/plugins/emitters/favicon.ts
+        - quartz/plugins/emitters/folderPage.tsx
+        - quartz/plugins/emitters/helpers.ts
+        - quartz/plugins/emitters/index.ts
+        - quartz/plugins/emitters/ogImage.tsx
+        - quartz/plugins/emitters/static.ts
+        - quartz/plugins/emitters/tagPage.tsx
+        - quartz/plugins/filters/draft.ts
+        - quartz/plugins/filters/explicit.ts
+        - quartz/plugins/filters/index.ts
+        - quartz/plugins/index.ts
+        - quartz/plugins/transformers/citations.ts
+        - quartz/plugins/transformers/description.ts
+        - quartz/plugins/transformers/frontmatter.ts
+        - quartz/plugins/transformers/gfm.ts
+        - quartz/plugins/transformers/index.ts
+        - quartz/plugins/transformers/lastmod.ts
+        - quartz/plugins/transformers/latex.ts
+        - quartz/plugins/transformers/linebreaks.ts
+        - quartz/plugins/transformers/links.ts
+        - quartz/plugins/transformers/ofm.ts
+        - quartz/plugins/transformers/oxhugofm.ts
+        - quartz/plugins/transformers/roam.ts
+        - quartz/plugins/transformers/syntax.ts
+        - quartz/plugins/transformers/toc.ts
+        - quartz/plugins/types.ts
+        - quartz/plugins/vfile.ts
+        - quartz/processors/emit.ts
+        - quartz/processors/filter.ts
+        - quartz/processors/parse.ts
+        - quartz/static/giscus/dark.css
+        - quartz/static/giscus/light.css
+        - quartz/static/icon.png
+        - quartz/static/og-image.png
+        - quartz/styles/base.scss
+        - quartz/styles/callouts.scss
+        - quartz/styles/custom.scss
+        - quartz/styles/syntax.scss
+        - quartz/styles/variables.scss
+        - quartz/util/clone.ts
+        - quartz/util/ctx.ts
+        - quartz/util/emoji.ts
+        - quartz/util/emojimap.json
+        - quartz/util/escape.ts
+        - quartz/util/fileTrie.test.ts
+        - quartz/util/fileTrie.ts
+        - quartz/util/glob.ts
+        - quartz/util/jsx.tsx
+        - quartz/util/lang.ts
+        - quartz/util/log.ts
+        - quartz/util/og.tsx
+        - quartz/util/path.test.ts
+        - quartz/util/path.ts
+        - quartz/util/perf.ts
+        - quartz/util/random.ts
+        - quartz/util/resources.tsx
+        - quartz/util/sourcemap.ts
+        - quartz/util/theme.ts
+        - quartz/util/trace.ts
+        - quartz/worker.ts
+        - tsconfig.json
+      note.status:
+        - Uncategorized
+        - 🌱 Зерно
+        - 🌿 Росток
+        - 🌳 Вечнозеленое
+    cardOrders:
+      file.file: {}
+      note.status: {}
+    columnColors:
+      file.file: {}
+      note.status: {}
+    groupByProperty: note.status
