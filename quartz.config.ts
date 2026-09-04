@@ -3,7 +3,7 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Заметки о том, как работают люди и системы",
+    pageTitle: "Заметки о том, как работают люди",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,

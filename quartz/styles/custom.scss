@@ -23,4 +23,20 @@
     pointer-events: auto !important;
   }
 }
-// put your custom CSS here!
+// Увеличить шрифт текста статей — и на десктопе, и на мобильном
+article.popover-hint {
+  font-size: 1.1rem;
+}
+
+@media all and (max-width: 800px) {
+  // Ещё крупнее шрифт конкретно на мобильном
+  article.popover-hint {
+    font-size: 1.15rem;
+  }
+
+  // Уменьшить шапку (логотип/название сайта) на мобильном
+  .left.sidebar .page-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+}// put your custom CSS here!
