@@ -5,15 +5,26 @@
 @media all and (min-width: 1200px) {
   .left.sidebar,
   .right.sidebar {
-    transition: opacity 0.4s ease, filter 0.4s ease;
+    transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
   }
 
-  /* Когда читатель фокусируется на тексте (наводит курсор на центральную колонку) */
+  /* Когда читатель фокусируется на тексте (наводит курсор на центральную колонку)
+     или скроллит вниз (см. sidebarautohide.inline.ts) — боковые панели уходят с дороги */
   .page:has(.center:hover) .left.sidebar,
-  .page:has(.center:hover) .right.sidebar {
+  .page:has(.center:hover) .right.sidebar,
+  html.sidebars-hidden .left.sidebar,
+  html.sidebars-hidden .right.sidebar {
     opacity: 0.05;
     filter: blur(2px);
     pointer-events: none;
+  }
+
+  html.sidebars-hidden .left.sidebar {
+    transform: translateX(-12px);
+  }
+
+  html.sidebars-hidden .right.sidebar {
+    transform: translateX(12px);
   }
 
   /* При подведении курсора к боковинам они мгновенно проявляются */
@@ -21,6 +32,7 @@
   .right.sidebar:hover {
     opacity: 1 !important;
     filter: blur(0) !important;
+    transform: none !important;
     pointer-events: auto !important;
   }
 }

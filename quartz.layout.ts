@@ -5,7 +5,7 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [Component.Subscribe()],
+  afterBody: [Component.Subscribe(), Component.SidebarAutoHide()],
   footer: Component.Footer({
     links: {
       Telegram: "https://t.me/delavporyadke",
