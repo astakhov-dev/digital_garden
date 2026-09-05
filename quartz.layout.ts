@@ -8,9 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [Component.Subscribe()],
   footer: Component.Footer({
     links: {
-      Telegram: "https://t.me/delavporyadke",
-      LinkedIn: "https://www.linkedin.com/in/olegbatalov/",
-      Instagram: "https://www.instagram.com/olegbatalovv/",
+      GitHub: "https://github.com/jackyzha0/quartz",
+      "Discord Community": "https://discord.gg/cRFFHYye7t",
     },
   }),
 }
@@ -24,7 +23,6 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.StatusBadge(),
     Component.TagList(),
   ],
   left: [
@@ -43,7 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.DesktopOnly(Component.Graph()),
+    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],

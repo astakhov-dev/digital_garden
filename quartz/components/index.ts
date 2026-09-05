@@ -52,4 +52,3 @@ export {
   ConditionalRender,
   Subscribe,
 }
-export { default as StatusBadge } from "./StatusBadge"

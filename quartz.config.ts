@@ -3,13 +3,12 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Заметки о том, как работают люди",
+    pageTitle: "Заметки о том, как работают люди и системы",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "google",
-      tagId: "G-ZPYQYBF5QV",
+      provider: "plausible",
     },
     locale: "ru-RU",
     baseUrl: "olegbatalov.org",
