@@ -387,6 +387,7 @@ views:
         - tsconfig.json
       note.status:
         - Uncategorized
+        - 📓 Черновик
         - 🌱 Зерно
         - 🌿 Росток
         - 🌳 Вечнозеленое
