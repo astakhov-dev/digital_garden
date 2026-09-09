@@ -70,6 +70,7 @@ const config: QuartzConfig = {
     filters: [Plugin.RemoveDrafts(),Plugin.ExplicitPublish()],
     emitters: [
       Plugin.AliasRedirects(),
+      Plugin.LegacyRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage(),
