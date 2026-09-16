@@ -9,6 +9,9 @@ views:
         - file.folder == "content"
   - type: kanban-view
     name: Канбан
+    order:
+      - file.name
+      - publish
     columnOrders:
       file.file:
         - CNAME
