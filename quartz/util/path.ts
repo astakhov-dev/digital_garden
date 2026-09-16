@@ -54,16 +54,70 @@ export function getFullSlug(window: Window): FullSlug {
   return res
 }
 
+// Практическая транслитерация кириллицы в латиницу — чтобы URL заметок были
+// читаемыми ASCII-ссылками, а не процентно-закодированной "кракозяброй".
+const CYRILLIC_TO_LATIN: Record<string, string> = {
+  а: "a",
+  б: "b",
+  в: "v",
+  г: "g",
+  д: "d",
+  е: "e",
+  ё: "e",
+  ж: "zh",
+  з: "z",
+  и: "i",
+  й: "y",
+  к: "k",
+  л: "l",
+  м: "m",
+  н: "n",
+  о: "o",
+  п: "p",
+  р: "r",
+  с: "s",
+  т: "t",
+  у: "u",
+  ф: "f",
+  х: "h",
+  ц: "ts",
+  ч: "ch",
+  ш: "sh",
+  щ: "sch",
+  ъ: "",
+  ы: "y",
+  ь: "",
+  э: "e",
+  ю: "yu",
+  я: "ya",
+}
+
+function transliterate(s: string): string {
+  return s.replace(/[а-яёА-ЯЁ]/g, (ch) => {
+    const lower = ch.toLowerCase()
+    const latin = CYRILLIC_TO_LATIN[lower] ?? lower
+    if (ch !== lower && latin.length > 0) {
+      return latin[0].toUpperCase() + latin.slice(1)
+    }
+    return latin
+  })
+}
+
 function sluggify(s: string): string {
   return s
     .split("/")
     .map((segment) =>
-      segment
+      transliterate(segment)
         .replace(/\s/g, "-")
+        .replace(/—/g, "-")
+        .replace(/…/g, "")
+        .replace(/[,.()]/g, "")
         .replace(/&/g, "-and-")
         .replace(/%/g, "-percent")
         .replace(/\?/g, "")
-        .replace(/#/g, ""),
+        .replace(/#/g, "")
+        .replace(/-{2,}/g, "-")
+        .replace(/^-+|-+$/g, ""),
     )
     .join("/") // always use / as sep
     .replace(/\/$/, "")
