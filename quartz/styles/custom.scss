@@ -1,26 +1,18 @@
 @use "./base.scss";
-.explorer-ul li { margin-bottom: 0.45rem; }
-.explorer a { line-height: 1.4; display: inline-block; padding: 2px 0; }
+.explorer-item { margin-bottom: 0.5rem; } .explorer a { line-height: 1.4; display: inline-block; padding: 2px 0; }
+/* Универсальный режим чтения для Safari, Chrome и Edge */
 @media all and (min-width: 1200px) {
   .left.sidebar,
   .right.sidebar {
-    transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.4s ease, filter 0.4s ease;
   }
 
-  /* Скроллим вниз — боковые панели уходят с дороги (см. sidebarautohide.inline.ts) */
-  html.sidebars-hidden .left.sidebar,
-  html.sidebars-hidden .right.sidebar {
+  /* Когда читатель фокусируется на тексте (наводит курсор на центральную колонку) */
+  .page:has(.center:hover) .left.sidebar,
+  .page:has(.center:hover) .right.sidebar {
     opacity: 0.05;
     filter: blur(2px);
     pointer-events: none;
-  }
-
-  html.sidebars-hidden .left.sidebar {
-    transform: translateX(-12px);
-  }
-
-  html.sidebars-hidden .right.sidebar {
-    transform: translateX(12px);
   }
 
   /* При подведении курсора к боковинам они мгновенно проявляются */
@@ -28,25 +20,7 @@
   .right.sidebar:hover {
     opacity: 1 !important;
     filter: blur(0) !important;
-    transform: none !important;
     pointer-events: auto !important;
-  }
-}
-// Увеличить шрифт текста статей — и на десктопе, и на мобильном
-article.popover-hint {
-  font-size: 1.1rem;
-}
-
-@media all and (max-width: 800px) {
-  // Ещё крупнее шрифт конкретно на мобильном
-  article.popover-hint {
-    font-size: 1.15rem;
-  }
-
-  // Уменьшить шапку (логотип/название сайта) на мобильном
-  .left.sidebar .page-title {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
   }
 }
 // put your custom CSS here!
