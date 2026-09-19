@@ -8,8 +8,7 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "google",
-      tagId: "G-ZPYQYBF5QV",
+      provider: "plausible",
     },
     locale: "ru-RU",
     baseUrl: "olegbatalov.org",
@@ -70,7 +69,6 @@ const config: QuartzConfig = {
     filters: [Plugin.RemoveDrafts(),Plugin.ExplicitPublish()],
     emitters: [
       Plugin.AliasRedirects(),
-      Plugin.LegacyRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage(),

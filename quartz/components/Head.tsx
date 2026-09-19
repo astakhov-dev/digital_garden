@@ -5,24 +5,6 @@ import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { unescapeHTML } from "../util/escape"
 import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
-import fs from "fs"
-import path from "path"
-import crypto from "crypto"
-
-// Хэш от содержимого og-image.png — меняется вместе с файлом, чтобы Telegram
-// и другие мессенджеры не показывали закэшированную старую картинку по
-// одному и тому же URL. Считается один раз за сборку, не на каждую страницу.
-function getOgImageVersion(): string {
-  try {
-    const imgPath = path.join(process.cwd(), "quartz", "static", "og-image.png")
-    const buf = fs.readFileSync(imgPath)
-    return crypto.createHash("md5").update(buf).digest("hex").slice(0, 8)
-  } catch {
-    return "1"
-  }
-}
-const ogImageVersion = getOgImageVersion()
-
 export default (() => {
   const Head: QuartzComponent = ({
     cfg,
@@ -52,7 +34,7 @@ export default (() => {
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
       (e) => e.name === CustomOgImagesEmitterName,
     )
-    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png?v=${ogImageVersion}`
+    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
 
     return (
       <head>
@@ -87,7 +69,7 @@ export default (() => {
             <meta name="twitter:image" content={ogImageDefaultPath} />
             <meta
               property="og:image:type"
-              content={`image/${(getFileExtension(ogImageDefaultPath) ?? ".png").replace(/^\./, "")}`}
+              content={`image/${getFileExtension(ogImageDefaultPath) ?? "png"}`}
             />
           </>
         )}
