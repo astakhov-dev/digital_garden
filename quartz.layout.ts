@@ -5,11 +5,12 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [Component.Subscribe()],
+  afterBody: [Component.Subscribe(), Component.SidebarAutoHide()],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      Telegram: "https://t.me/delavporyadke",
+      LinkedIn: "https://www.linkedin.com/in/olegbatalov/",
+      Instagram: "https://www.instagram.com/olegbatalovv/",
     },
   }),
 }
@@ -23,6 +24,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
+    Component.StatusBadge(),
     Component.TagList(),
   ],
   left: [
@@ -41,7 +43,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
+    Component.DesktopOnly(Component.Graph()),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],

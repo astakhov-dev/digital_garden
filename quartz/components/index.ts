@@ -52,3 +52,5 @@ export {
   ConditionalRender,
   Subscribe,
 }
+export { default as StatusBadge } from "./StatusBadge"
+export { default as SidebarAutoHide } from "./SidebarAutoHide"
